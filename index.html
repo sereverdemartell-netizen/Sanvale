@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¿Quieres ser mi San Valentín?</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>¿Quieres ser mi <span class="valentine">San Valentín</span>?</h1>
+
+    <div class="card">
+      <img src="1.jpg" alt="Nosotros" class="bear" />
+      <p class="question">¿Quieres ser mi San Valentín?</p>
+
+      <div class="buttons">
+        <button class="yes-button" onclick="handleYesClick()">Sí</button>
+        <button class="no-button" onclick="handleNoClick()">No</button>
+      </div>
+
+      <!-- Botón de música -->
+      <button id="musicButton" class="music-button" onclick="toggleMusic()">
+        💖 Reproducir canción
+      </button>
+    </div>
+  </div>
+
+  <audio id="valentineSong" src="musica.mp3" loop></audio>
+  <script src="script.js"></script>
+  <script>
+    let isPlaying = false;
+    const audio = document.getElementById('valentineSong');
+    const musicBtn = document.getElementById('musicButton');
+
+    function toggleMusic() {
+      if (isPlaying) {
+        audio.pause();
+        musicBtn.textContent = '💖 Reproducir canción';
+        isPlaying = false;
+      } else {
+        audio.play();
+        musicBtn.textContent = '⏸️ Pausar canción';
+        isPlaying = true;
+      }
+    }
+  </script>
+</body>
+</html>

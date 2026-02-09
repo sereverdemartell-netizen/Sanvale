@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1a202c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 30px;
+  color: white;
+}
+
+.valentine {
+  background: linear-gradient(90deg, #7cff8f, #4dff8f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.bear {
+  width: 180px;
+  height: auto;
+  margin: 0 auto 20px;
+  display: block;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.question {
+  font-size: 1.4rem;
+  color: #e53e3e;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.yes-button {
+  background: #f56565;
+  color: white;
+}
+
+.no-button {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 480px) {
+  h1 { font-size: 2.8rem; }
+  .card { padding: 20px; }
+  .bear { width: 140px; }
+}
+/* Botón de música */
+.music-button {
+  margin-top: 25px;
+  padding: 10px 20px;
+  background: #f56565;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.music-button:hover {
+  background: #e53e3e;
+  transform: scale(1.05);
+}

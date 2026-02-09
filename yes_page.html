@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Sí! 💖</title>
+  <style>
+    body {
+      background: #fff0f5;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: 'Segoe UI', sans-serif;
+      color: #d63384;
+      text-align: center;
+      padding: 20px;
+      margin: 0;
+    }
+    h1 { font-size: 2.5rem; margin-bottom: 20px; }
+    .heart { 
+      font-size: 4rem; 
+      animation: pulse 1.2s infinite; 
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .music-button {
+      margin-top: 25px;
+      padding: 10px 20px;
+      background: #f56565;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .music-button:hover {
+      background: #e53e3e;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <h1>¡Dijiste que SÍ! 🎉</h1>
+  <div class="heart">💖</div>
+  <p>Ahora somos San Valentín y San Valentina… ¡para siempre, mi cielo! 😘</p>
+
+  <!-- Botón de música -->
+  <button id="musicButton" class="music-button" onclick="toggleMusic()">
+    💖 Reproducir canción
+  </button>
+
+  <audio id="valentineSong" src="musica1.mp3" loop></audio>
+  <script>
+    let isPlaying = false;
+    const audio = document.getElementById('valentineSong');
+    const musicBtn = document.getElementById('musicButton');
+
+    function toggleMusic() {
+      if (isPlaying) {
+        audio.pause();
+        musicBtn.textContent = '💖 Reproducir canción';
+        isPlaying = false;
+      } else {
+        audio.play();
+        musicBtn.textContent = '⏸️ Pausar canción';
+        isPlaying = true;
+      }
+    }
+  </script>
+</body>
+</html>
